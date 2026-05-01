@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: white;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: black;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  color: #1db954;
+}
+
+#search {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.sidebar li {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sidebar li:hover {
+  background: #1db954;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  text-align: center;
+  padding: 30px;
+}
+
+.logo {
+  color: #1db954;
+}
+
+img {
+  width: 250px;
+  border-radius: 15px;
+}
+
+/* Controls */
+.controls {
+  margin-top: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.play-btn {
+  font-size: 22px;
+  background: linear-gradient(45deg, #1db954, #1ed760);
+  box-shadow: 0 0 15px #1db954;
+}
+
+.controls button {
+  margin: 8px;
+  padding: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #282828;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  transform: scale(1.15);
+  background: #1db954;
+}
+
+.active-btn {
+  background: #1db954 !important;
+}
+
+/* Sliders */
+.slider-box {
+  margin-top: 15px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.slider-box label {
+  font-size: 12px;
+  color: #aaa;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #1db954;
+}
+
+/* Active song */
+.active {
+  background: #1db954;
+}
+
+/* Equalizer */
+.equalizer {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.equalizer span {
+  width: 5px;
+  height: 10px;
+  background: #1db954;
+  animation: bounce 1s infinite;
+  animation-play-state: paused;
+}
+
+.equalizer span:nth-child(2){animation-delay:0.2s;}
+.equalizer span:nth-child(3){animation-delay:0.4s;}
+.equalizer span:nth-child(4){animation-delay:0.6s;}
+.equalizer span:nth-child(5){animation-delay:0.8s;}
+
+@keyframes bounce {
+  0%,100% {height:10px;}
+  50% {height:30px;}
+}
